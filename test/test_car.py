@@ -11,9 +11,6 @@ from car import Car
 
 
 
-# from engine.capulet_engine import CapuletEngine
-
-
 class TestCalliope(unittest.TestCase):
     def test_battery_should_be_serviced(self):
         today = datetime.today().date()
