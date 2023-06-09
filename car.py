@@ -8,4 +8,5 @@ class Car(Serviceable):
         self.agg_battery = battery
 
     def needs_service(self):
-        pass
+        return (self.agg_battery.needs_service() or 
+        self.agg_engine.needs_service())
