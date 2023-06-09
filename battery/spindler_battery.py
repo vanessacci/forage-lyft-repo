@@ -7,6 +7,6 @@ class SpindlerBattery(IBattery):
         self.current_date = current_date
 
     def needs_service(self):
-        DAYS_IN_A_YEAR = 365
         service_year = 2
-        return (self.current_date - self.last_service_date) >= (service_year * DAYS_IN_A_YEAR)
+        service_date = self.last_service_date.replace(year=self.last_service_date.year + service_year)
+        return self.current_date >= service_date
